@@ -1,0 +1,73 @@
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    padding: 16px 24px;
+}
+
+@media screen and (max-width: 1000px) {
+  .header-wrapper {
+    align-items: left;
+    flex-direction: column;
+  }
+  .menu{
+    width: 100%;
+    flex-direction: column;
+  }
+  .logo{
+    margin-bottom: 14px;
+  }
+  h1{
+    color:red;
+  }
+  .left-section{
+    align-items: left;
+  }
+  .right-section{
+    align-items: right;
+  }
+  table, tr, td {
+    padding:4px 20px;
+  }
+}
+  .img-slideshow{
+    width:100%;
+    display: flex;
+    animation: slide 2s infinite;
+  }
+  .tepi-input{
+    width:40%;
+  }
+  .tepi-output{
+    width:40%;
+  }
+  .tab1{
+    display: inline-block;
+    margin-left: 60px;
+  }
+  
+  .tab2{
+    display: inline-block;
+    margin-left: 7px;
+  }
+  .tab3{
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .tab4{
+    display: inline-block;
+    margin-left: 58px;
+  }
+  .kotak-nama{
+    width:50%;
+  }
+  .kotak-tanggal{
+    width:50%;
+  }
+  .kotak-pesan{
+    width:50%;
+  }
+  .button-submit{
+    width:80%;
+  }
