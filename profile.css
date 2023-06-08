@@ -1,0 +1,17 @@
+
+.container{
+  text-align: center;
+}
+.banner{
+  width:100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .container{
+    color: green;
+  }
+.banner{
+    display: flex;
+    width:100%;
+  }
+}
