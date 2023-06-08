@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
-    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
      <link rel="stylesheet" type="text/css" href="profile.html"/>
-     <link rel="stylesheet" type="text/css" href="profile.css"/>
+     <link rel="stylesheet" type="text/css" href="css/profile.css"/>
      <link rel="stylesheet" type="text/css" href="message.html"/>
      <link rel="stylesheet" type="text/css" href="message.css"/>
      
@@ -43,12 +43,12 @@
       document.getElementById("nama").innerText=name;
     </script>
     
-    <p>Ini adalah website latihan pertama</p>
+    <h3>Ini adalah website latihan pertama</h3>
 </body>
 <div>
-  <img class="img-slideshow" src="revou.jpg"/>
-  <img class="img-slideshow" src="Sun1.jpeg"/>
-  <img class="img-slideshow" src="Sun2.jpeg"/>
+  <img class="img-slideshow" src="img/revou.jpg"/>
+  <img class="img-slideshow" src="img/Sun1.jpeg"/>
+  <img class="img-slideshow" src="img/Sun2.jpeg"/>
  </div>
   
 <!--<div>
@@ -56,28 +56,7 @@
   <button onclick="plusDivs(1)">Next</button>
 </div>-->
 
-<script>
-  var slideIndex = 1;
-  setInterval(function() {
-  plusDivs(1);
-  }, 1000)
-  
-  function plusDivs(n){
-    showDivs (slideIndex += n);
-  }
-  
-  function showDivs(n){
-    var i;
-    const imgList = document.getElementsByClassName("img-slideshow");
-    if(n > imgList.length) {slideIndex=1};
-    if (n < 1) {slideIndex = imgList.length};
-    for(i = 0; i < imgList.length; i++){
-      imgList[i].style.display = "none";
-    }
-    imgList[slideIndex-1].style.display="block";
-  }
-  
-</script>
+<script src="js/index.js"></script>
 
 <br></br>
 <br></br>
@@ -111,60 +90,41 @@
 
 <div>
   <form class="isi-form" name="message-form" onsubmit="return validateForm()">
-  <fieldset class="tepi-input">
-    <legend>Message Us</legend>
-    <label>Nama<span class="tab1"></span>:</label>
-    <input class="kotak-nama" type="text" name="full-name" placeholder="Nama" />
-    <br />
+    <fieldset class="tepi-input">
+      <legend>Message Us</legend>
+      <label>Nama<span class="tab1"></span>:</label>
+      <input class="kotak-nama" type="text" name="full-name" placeholder="Nama" />
+      <br />
 
-    <label>Tanggal Lahir<span class="tab2"></span>:</label>
-    <input class="kotak-tanggal" type="date" name="birth-date" />
-    <br />
+      <label>Tanggal Lahir<span class="tab2"></span>:</label>
+      <input class="kotak-tanggal" type="date" name="birth-date" />
+      <br />
 
-    <label>Jenis kelamin<span class="tab3"></span>:</label>
-    <input type="radio" id="male" name="gender" value="Laki-laki" />
-    <label for="male">Laki-laki</label>
-    <input type="radio" id="female" name="gender" value="Perempuan" />
-    <label for="female">Perempuan</label>
-    <br />
+      <label>Jenis kelamin<span class="tab3"></span>:</label>
+      <input type="radio" id="male" name="gender" value="Laki-laki" />
+      <label for="male">Laki-laki</label>
+      <input type="radio" id="female" name="gender" value="Perempuan" />
+      <label for="female">Perempuan</label>
+      <br />
 
-    <label>Pesan<span class="tab4"></span>:</label>
-    <textarea class="kotak-pesan" name="messages" placeholder="Pesan"></textarea>
-    <br />
+      <label>Pesan<span class="tab4"></span>:</label>
+      <textarea class="kotak-pesan" name="messages" placeholder="Pesan"></textarea>
+      <br />
 
-    <input class="button-submit" type="submit" value="Submit" />
-   </fieldset>
-</form>
+      <input class="button-submit" type="submit" value="Submit" />
+    </fieldset>
+  </form>
 </div>
 
-<script>
-  function validateForm() {
-    var name = document.forms["message-form"]["full-name"].value;
-    var birthDate = document.forms["message-form"]["birth-date"].value;
-    var gender = document.forms["message-form"]["gender"].value;
-    var messages = document.forms["message-form"]["messages"].value;
-
-    if (name == "" || birthDate == "" || gender == "" || messages == "") {
-      alert("Tidak boleh ada yang kosong!");
-      return false
-    }
-    var dt = new Date();
-    document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleString();
-    document.getElementById("sender-full-name").innerHTML = name;
-    document.getElementById("sender-birth-date").innerHTML = birthDate;
-    document.getElementById("sender-gender").innerHTML = gender;
-    document.getElementById("sender-messages").innerHTML = messages;
-    return false;
-  }
-</script>
+<script src="js/index.js"></script>
 
 <fieldset class="tepi-output">
   <div>
-    <p><b>Current time: </b><span id="tanggalwaktu"></span></p>
-    <p><b>Nama : </b><span id="sender-full-name"></span></p>
-    <p><b>Tanggal Lahir : </b><span id="sender-birth-date"></span></p>
-    <p><b>Jenis Kelamin : </b><span id="sender-gender"></span></p>
-    <p><b>Pesan : </b><span id="sender-messages"></span></p>
+    <h4><b>Current time: </b><span id="tanggalwaktu"></span></h4>
+    <h4><b>Nama : </b><span id="sender-full-name"></span></h4>
+    <h4><b>Tanggal Lahir : </b><span id="sender-birth-date"></span></h4>
+    <h4><b>Jenis Kelamin : </b><span id="sender-gender"></span></h4>
+    <h4><b>Pesan : </b><span id="sender-messages"></span></h4>
   </div>
 </fieldset>
 </body>
